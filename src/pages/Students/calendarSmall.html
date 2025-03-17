@@ -32,16 +32,19 @@
 
     @@include('./Students/_sidenav.html', {
     "path": "../..",
-    "page": "tables"
+    "page": "CalendarSmall",
+    "page_group":"calendar"
     })
 
     <main class="content">
         @@include('./Students/_topbar.html', {
         "path": "../.."
         })
-     
+
         <div class="row">
-            <div class="col-7"><div id="calendar"></div></div>
+            <div class="col-7">
+                <div id="calendar"></div>
+            </div>
         </div>
 
         @@include('./dashboard/_footer.html', {
