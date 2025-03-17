@@ -1,0 +1,88 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./_headWithCalendar.html', {
+    "path": "../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+    })
+</head>
+
+<body>
+    @@include('./Students/_nav.html', {
+    "path": "../.."
+    })
+
+    @@include('./Students/_sidenav.html', {
+    "path": "../..",
+    "page": "tables"
+    })
+
+    <main class="content">
+        @@include('./Students/_topbar.html', {
+        "path": "../.."
+        })
+     
+        <div class="row">
+            <div class="col-7"><div id="calendar"></div></div>
+        </div>
+
+        @@include('./dashboard/_footer.html', {
+        "path": "../..",
+        "classes": "bg-gray-800 text-white"
+        })
+    </main>
+
+    @@include('./_scriptsWithBSTable.html', {
+    "path": "../.."
+    })
+
+    <!-- <script type="module" src="../../Js/Students/ShowAll/entryFile.js"></script> -->
+
+    <!-- <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script> -->
+
+    <script>
+        let jVarGlobalCalendar = null;
+
+        const jFADdEvent = () => {
+            calendar.addEvent({
+                title: "3rd",
+                start: '2025-03-19',
+                className: 'bg-success'
+            });
+        };
+
+    </script>
+
+    <script type="module" src="../../Js/Students/CalendarSmall/entryFile.js"></script>
+
+</body>
+
+</html>
