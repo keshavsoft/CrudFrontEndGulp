@@ -90,13 +90,13 @@
                         <form onsubmit="return false" id="FormId">
                             <div class="mb-3">
                                 <label class="form-label">Student Name</label>
-                                <input name="StudentName" type="text" class="form-control" autocomplete="off" required autofocus
-                                    oninput="this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '')">
+                                <input name="StudentName" type="text" class="form-control" autocomplete="off" required
+                                    autofocus oninput="this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '')">
                                 <div class="invalid-feedback">
                                     Student Name should not be empty!!
                                 </div>
                             </div>
-        
+
                             <div class="mb-3">
                                 <label class="form-label">Mobile</label>
                                 <input name="Mobile" type="text" class="form-control" autocomplete="off" required
@@ -105,7 +105,7 @@
                                     Mobile should not be empty!!
                                 </div>
                             </div>
-        
+
                             <div class="mb-3">
                                 <label class="form-label">DOB</label>
                                 <input name="DOB" type="date" class="form-control" id="dob" autocomplete="off">
@@ -113,7 +113,7 @@
                                     DOB should not be empty!!
                                 </div>
                             </div>
-        
+
                             <div class="text-center">
                                 <button id="SaveButtonId" class="btn btn-primary">Save</button>
                             </div>
@@ -128,7 +128,7 @@
                 <h5>Student Form</h5>
             </div>
             <div class="card-body">
-             
+
             </div>
         </div>
 
@@ -267,7 +267,7 @@
         })
     </main>
 
-    @@include('./_scriptsWithBSTable.html', {
+    @@include('./Students/_scriptsWithCount.html', {
     "path": "../.."
     })
 
