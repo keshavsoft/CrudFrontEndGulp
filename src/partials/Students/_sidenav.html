@@ -114,11 +114,22 @@
                     data-bs-toggle="collapse" data-bs-target="#submenu-Orders">
                     <span>
                         <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
+                            <!-- <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
                                     clip-rule="evenodd"></path>
+                            </svg> -->
+
+
+                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z">
+                                </path>
+                                <path
+                                    d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z">
+                                </path>
                             </svg>
                         </span>
                         <span class="sidebar-text">Create</span>
@@ -138,8 +149,8 @@
                     <ul class="flex-column nav">
                         <li class="nav-item @@if (context.page === 'createNew') { active }">
                             <a class="nav-link d-flex align-items-center" href="createNew.html">
-                                <!-- <i class="bi bi-hash me-3" style="color: #dc3545;"></i> -->
-                                <span class="sidebar-text">createNew</span>
+                                <span class="sidebar-text-contracted">C</span>
+                                <span class="sidebar-text">Create New</span>
                             </a>
                         </li>
                     </ul>
