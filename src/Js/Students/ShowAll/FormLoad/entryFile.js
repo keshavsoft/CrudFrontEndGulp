@@ -1,8 +1,8 @@
 import { StartFunc as StartFuncAddListeners } from "./AddListeners/StartFunc.js";
-import { StartFunc as StartFuncFromUrlParams } from "./FromUrlParams/EntryFile.js";
+import { StartFunc as StartFuncFromFetchAsGet } from "./FetchAsGet/entryFile.js";
 
 const StartFunc = () => {
-    StartFuncFromUrlParams();
+    StartFuncFromFetchAsGet().then();
     StartFuncAddListeners();
 };
 
