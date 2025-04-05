@@ -1,4 +1,5 @@
 import UrlJson from './url.json' with {type: 'json'};
+import ConfigJson from '../../../../../Config.json' with {type: 'json'};
 
 let StartFunc = ({ inRowPk }) => {
     let LocalRowPk = inRowPk;
@@ -21,6 +22,7 @@ const LocalFuncForSingleTable = ({ inRowPk }) => {
 
 const LocalFuncForAllTables = ({ inRowPk }) => {
     let LocalRowPk = inRowPk;
+    const jVarGlobalTableName = ConfigJson.tableName;
 
     window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
 };
