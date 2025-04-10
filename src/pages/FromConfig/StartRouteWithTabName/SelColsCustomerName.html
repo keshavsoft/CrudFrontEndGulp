@@ -20,18 +20,18 @@
 
 <head>
     @@include('./_headWithBSTable.html', {
-    "path": "../..",
+    "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
 </head>
 
 <body>
     @@include('./Students/_nav.html', {
-    "path": "../.."
+    "path": "../../.."
     })
 
     @@include('./Students/_sidenav.html', {
-    "path": "../..",
+    "path": "../../..",
     "page": "SelColsCustomerName",
     "page_group":"SelectedColumns"
     })
@@ -39,7 +39,7 @@
     <main class="content">
 
         @@include('./Students/_topbar.html', {
-        "path": "../.."
+        "path": "../../.."
         })
 
         <div class="py-4">
@@ -94,16 +94,16 @@
         </div>
 
         @@include('./dashboard/_footer.html', {
-        "path": "../..",
+        "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
     @@include('./Students/_scriptsWithCount.html', {
-    "path": "../.."
+    "path": "../../.."
     })
 
-    <script type="module" src="../../Js/Students/SelColsCustomerName/entryFile.js"></script>
+    <script type="module" src="../../../Js/FromConfig/StartRouteWithTabName/SelColsCustomerName/entryFile.js"></script>
 
 </body>
 
