@@ -1,4 +1,4 @@
 {
     "CommonRoutePath": "binV4",
-    "TableName": "Students"
+    "CommonTableName": "StudentNames"
 }
