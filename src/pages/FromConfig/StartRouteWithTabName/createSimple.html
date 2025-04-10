@@ -20,26 +20,26 @@
 
 <head>
     @@include('./_headWithBSTable.html', {
-    "path": "../..",
+    "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
 </head>
 
 <body>
-    @@include('./Students/_nav.html', {
-    "path": "../.."
+    @@include('./FromConfig/StartRouteWithTabName/_nav.html', {
+    "path": "../../.."
     })
 
-    @@include('./Students/_sidenav.html', {
-    "path": "../..",
+    @@include('./FromConfig/StartRouteWithTabName/_sidenav.html', {
+    "path": "../../..",
     "page": "createSimple",
     "page_group":"createNew"
     })
 
     <main class="content">
 
-        @@include('./Students/_topbar.html', {
-        "path": "../.."
+        @@include('./FromConfig/StartRouteWithTabName/_topbar.html', {
+        "path": "../../.."
         })
 
         <div class="py-4">
@@ -115,17 +115,17 @@
             </div>
         </div>
 
-        @@include('./dashboard/_footer.html', {
-        "path": "../..",
+        @@include('./FromConfig/StartRouteWithTabName/_footer.html', {
+        "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./Students/_scriptsWithCount.html', {
-    "path": "../.."
+    @@include('./FromConfig/StartRouteWithTabName/_scriptsWithCount.html', {
+    "path": "../../.."
     })
 
-    <script type="module" src="../../Js/Students/CreateSimple/entryFile.js"></script>
+    <script type="module" src="../../../Js/FromConfig/StartRouteWithTabName/CreateSimple/entryFile.js"></script>
 
 </body>
 

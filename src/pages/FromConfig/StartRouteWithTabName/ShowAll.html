@@ -20,25 +20,25 @@
 
 <head>
     @@include('./_headWithBSTable.html', {
-    "path": "../..",
+    "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
 </head>
 
 <body>
-    @@include('./HtmlWithConfig/_nav.html', {
-    "path": "../.."
+    @@include('./FromConfig/StartRouteWithTabName/_nav.html', {
+    "path": "../../.."
     })
 
-    @@include('./HtmlWithConfig/_sidenav.html', {
-    "path": "../..",
+    @@include('./FromConfig/StartRouteWithTabName/_sidenav.html', {
+    "path": "../../..",
     "page": "tables"
     })
 
     <main class="content">
 
-        @@include('./HtmlWithConfig/_topbar.html', {
-        "path": "../.."
+        @@include('./FromConfig/StartRouteWithTabName/_topbar.html', {
+        "path": "../../.."
         })
 
         <div class="py-4">
@@ -93,16 +93,16 @@
         </div>
 
         @@include('./dashboard/_footer.html', {
-        "path": "../..",
+        "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./HtmlWithConfig/_scriptsWithCount.html', {
-    "path": "../.."
+    @@include('./FromConfig/StartRouteWithTabName/_scriptsWithCount.html', {
+    "path": "../../.."
     })
 
-    <script type="module" src="../../Js/HtmlWithConfig/ShowAll/entryFile.js"></script>
+    <script type="module" src="../../../Js/FromConfig/StartRouteWithTabName/"></script>
 
 </body>
 
