@@ -162,8 +162,8 @@
             </li>
             <li class="nav-item">
                 <span
-                    class="nav-link @@if (context.page !== 'datatables' && context.page !== 'FixedCol') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#submenu-app">
+                    class="nav-link @@if (context.page_group !== 'FixedColumns') { collapsed } d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#@@page_groupMenu">
                     <span>
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
@@ -173,7 +173,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </span>
-                        <span class="sidebar-text">Fixed_Col_Show</span>
+                        <span class="sidebar-text">@@page_group</span>
                     </span>
                     <span class="link-arrow">
                         <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
@@ -184,10 +184,10 @@
                         </svg>
                     </span>
                 </span>
-                <div class="multi-level collapse @@if (context.page === 'datatables' || context.page === 'FixedCol') { show }"
-                    role="list" id="submenu-app" aria-expanded="false">
+                <div class="multi-level collapse @@if (context.page_group === 'FixedColumns') { show }" role="list"
+                    id="@@page_groupMenu" aria-expanded="false">
                     <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'FixedCol') { active }">
+                        <li class="nav-item @@if (context.page === 'FixedColShowAll') { active }">
                             <a class="nav-link" href="FixedColShowAll.html">
                                 <span class="sidebar-text">AsIs</span>
                             </a>
@@ -195,202 +195,6 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item">
-                <span
-                    class="nav-link @@if (context.page_group !== 'SelectedColumns') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#SelectedColumnsMenu">
-                    <span>
-                        <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-text">SelectedColumns</span>
-                    </span>
-                    <span class="link-arrow">
-                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                </span>
-                <div class="multi-level collapse @@if (context.page_group === 'SelectedColumns') { show }" role="list"
-                    id="SelectedColumnsMenu" aria-expanded="false">
-                    <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'SelColsCustomerName') { active }">
-                            <a class="nav-link" href="SelColsCustomerName.html">
-                                <span class="sidebar-text">CustomerName</span>
-                            </a>
-                        </li>
-                        <li class="nav-item @@if (context.page === 'SelColsCustomerMobile') { active }">
-                            <a class="nav-link" href="SelColsCustomerMobile.html">
-                                <span class="sidebar-text">CustomerMobile</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <!-- <li class="nav-item">
-                <span
-                    class="nav-link @@if (context.page_group !== 'calendar') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#submenu-Orders">
-                    <span>
-                        <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-text">Calendar</span>
-                    </span>
-                    <span class="link-arrow">
-                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                </span>
-
-                <div class="multi-level collapse @@if (context.page_group === 'calendar') { show }" role="list"
-                    id="submenu-Orders" aria-expanded="false">
-                    <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'CalendarAddEvents') { active }">
-                            <a class="nav-link d-flex align-items-center" href="CalendarAddEvents.html">
-                                <i class="bi bi-hash me-3" style="color: #dc3545;"></i>
-                                <span class="sidebar-text">AddEvents</span>
-                            </a>
-                        </li>
-                        <li class="nav-item @@if (context.page === 'calendarBig') { active }">
-                            <a class="nav-link d-flex align-items-center" href="calendarBig.html">
-                                <i class="bi bi-list-ul me-3" style="color: #007bff;"></i>
-                                <span class="sidebar-text">Big</span>
-                            </a>
-                        </li>
-                        <li class="nav-item @@if (context.page === 'calendar') { active }">
-                            <a class="nav-link d-flex align-items-center" href="calendar.html">
-                                <i class="bi bi-list-ul me-3" style="color: #007bff;"></i>
-                                <span class="sidebar-text">Full</span>
-                            </a>
-                        </li>
-                        <li class="nav-item @@if (context.page === 'calendarSimple') { active }">
-                            <a class="nav-link d-flex align-items-center" href="calendarSimple.html">
-                                <i class="bi bi-calendar-date me-3" style="color: #28a745;"></i>
-                                <span class="sidebar-text">Simple</span>
-                            </a>
-                        </li>
-                        <li class="nav-item @@if (context.page === 'calendarSmall') { active }">
-                            <a class="nav-link d-flex align-items-center" href="calendarSmall.html">
-                                <i class="bi bi-calendar2-week me-3" style="color: #ffc107;"></i>
-                                <span class="sidebar-text">Small</span>
-                            </a>
-                        </li> -->
-
-            <!-- <li class="nav-item @@if (context.page === 'Details') { active }">
-                            <a class="nav-link d-flex align-items-center" href="Details.html">
-                                <i class="bi bi-card-list me-3" style="color: #6f42c1;"></i>
-                                <span class="sidebar-text">Details</span>
-                            </a>
-                        </li>
-                        <li class="nav-item @@if (context.page === 'IsSettled') { active }">
-                            <a class="nav-link d-flex align-items-center" href="IsSettled.html">
-                                <i class="bi bi-check-circle me-3" style="color: #fd7e14;"></i>
-                                <span class="sidebar-text">IsSettled</span>
-                            </a>
-                        </li> -->
-            <!-- <li class="nav-item @@if (context.page === 'Settled') { active }">
-                            <a class="nav-link d-flex align-items-center" href="Settled.html">
-                                <i class="bi bi-check2-square me-3" style="color: #20c997;"></i>
-                                <span class="sidebar-text">Settled</span>
-                            </a>
-                        </li> -->
         </ul>
-
-
-
-    </div>
-    </li>
-    <li class="nav-item">
-        <span
-            class="nav-link @@if (context.page_group !== 'import') { collapsed } d-flex justify-content-between align-items-center"
-            data-bs-toggle="collapse" data-bs-target="#ImportMenu">
-            <span>
-                <span class="sidebar-icon">
-                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </span>
-                <span class="sidebar-text">Import</span>
-            </span>
-            <span class="link-arrow">
-                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </span>
-        </span>
-        <div class="multi-level collapse @@if (context.page_group === 'import') { show }" role="list" id="ImportMenu"
-            aria-expanded="false">
-            <ul class="flex-column nav">
-                <li class="nav-item @@if (context.page === 'importFromExcel') { active }">
-                    <a class="nav-link" href="importFromExcel.html">
-                        <span class="sidebar-text">From Excel</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </li>
-    <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
-    <li class="nav-item">
-        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/" target="_blank"
-            class="nav-link d-flex align-items-center">
-            <span class="sidebar-icon">
-                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </span>
-            <span class="sidebar-text">Documentation <span
-                    class="badge badge-sm bg-secondary ms-1 text-gray-800">v1.4</span></span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
-            <span class="sidebar-icon">
-                <img src="@@path/assets/img/themesberg.svg" height="20" width="28" alt="Themesberg Logo">
-            </span>
-            <span class="sidebar-text">Themesberg</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="@@path/pages/upgrade-to-pro.html"
-            class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
-            <span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
-                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </span>
-            <span>Upgrade to Pro</span>
-        </a>
-    </li>
-    </ul>
     </div>
 </nav>
