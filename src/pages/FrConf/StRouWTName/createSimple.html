@@ -26,18 +26,19 @@
 </head>
 
 <body>
-    @@include('./FromConfig/StartRouteWithTabName/_nav.html', {
+    @@include('./FrConf/StRouWTName/_nav.html', {
     "path": "../../.."
     })
 
-    @@include('./FromConfig/StartRouteWithTabName/_sidenav.html', {
+    @@include('./FrConf/StRouWTName/_sidenav.html', {
     "path": "../../..",
-    "page": "tables"
+    "page": "createSimple",
+    "page_group":"createNew"
     })
 
     <main class="content">
 
-        @@include('./FromConfig/StartRouteWithTabName/_topbar.html', {
+        @@include('./FrConf/StRouWTName/_topbar.html', {
         "path": "../../.."
         })
 
@@ -60,8 +61,7 @@
             </nav>
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0">
-                    <h1 class="h4">Students Show All</h1>
-                    <p class="mb-0">Show all the students.</p>
+                    <h1 class="h4">Create Simple</h1>
                 </div>
                 <div>
                     <a id="RefreshATagId" href="#"
@@ -83,26 +83,49 @@
             </div>
         </div>
 
-        <div class="card border-0 shadow mb-4">
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table id="table">
-                    </table>
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 shadow components-section">
+                    <div class="card-body">
+                        <form onsubmit="return false" id="FormId">
+                            <div class="mb-3">
+                                <label class="form-label">Student Name</label>
+                                <input name="StudentName" type="text" class="form-control" autocomplete="off" required
+                                    autofocus oninput="this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '')">
+                                <div class="invalid-feedback">
+                                    Student Name should not be empty!!
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mobile</label>
+                                <input name="Mobile" type="text" class="form-control" autocomplete="off" required
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)">
+                                <div class="invalid-feedback">
+                                    Mobile should not be empty!!
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button id="SaveButtonId" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
-        @@include('./dashboard/_footer.html', {
+        @@include('./FrConf/StRouWTName/_footer.html', {
         "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./FromConfig/StartRouteWithTabName/_scriptsWithCount.html', {
+    @@include('./FrConf/StRouWTName/_scriptsWithCount.html', {
     "path": "../../.."
     })
 
-    <script type="module" src="../../../Js/FromConfig/StartRouteWithTabName/ShowAll/entryFile.js"></script>
+    <script type="module" src="../../../Js/FrConf/StRouWTName/CreateSimple/entryFile.js"></script>
 
 </body>
 
