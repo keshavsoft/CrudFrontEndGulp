@@ -20,14 +20,14 @@
 
 <head>
     @@include('./_headWithBSTable.html', {
-    "path": "../../..",
+    "path": "../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap FixedCol"
     })
 </head>
 
 <body>
     @@include('./FrConf/StRouWTName/_nav.html', {
-    "path": "../../.."
+    "path": "../.."
     })
 
     @@include('./Menu/_sidenav.html', {
@@ -38,7 +38,7 @@
 
     <main class="content">
         @@include('./FrConf/StRouWTName/_topbar.html', {
-        "path": "../../.."
+        "path": "../.."
         })
 
         <div class="py-4">
@@ -90,17 +90,14 @@
         </div>
 
         @@include('./FrConf/StRouWTName/_footer.html', {
-        "path": "../../..",
+        "path": "../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./FrConf/StRouWTName/_scriptsWithCount.html', {
-    "path": "../../.."
+    @@include('./Menu/_scripts.html', {
+    "path": "../.."
     })
-
-    <script type="module" src="../../../Js/FrConf/StRouWTName/FixedColShowAll/entryFile.js"></script>
-
 </body>
 
 </html>
