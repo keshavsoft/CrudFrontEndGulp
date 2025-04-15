@@ -2,6 +2,17 @@ import KeysJson from './Keys.json' with {type: 'json'};
 
 let StartFunc = async () => {
     let jVarLocalForm = document.getElementById("FormId");
+    var formData = new FormData(jVarLocalForm);
+
+    formData.append("image", document.getElementById('formFile').files[0]);
+
+    KeysJson.body = formData;
+
+    return await KeysJson;
+};
+
+let StartFunc_Keshav_15Apr2025 = async () => {
+    let jVarLocalForm = document.getElementById("FormId");
     let formData = new FormData(jVarLocalForm);
 
     // Append file input
