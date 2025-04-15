@@ -207,6 +207,16 @@
                         </li>
                     </ul>
                 </div>
+                <div class="multi-level collapse @@if (context.page_group === 'Image') { show }" role="list"
+                    id="@@page_groupMenulinked" aria-expanded="false">
+                    <ul class="flex-column nav">
+                        <li class="nav-item @@if (context.page === 'ImageFromCamera') { active }">
+                            <a class="nav-link" href="ImageFromCamera.html">
+                                <span class="sidebar-text">ImageFromCamera</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="nav-item">
                 <span
