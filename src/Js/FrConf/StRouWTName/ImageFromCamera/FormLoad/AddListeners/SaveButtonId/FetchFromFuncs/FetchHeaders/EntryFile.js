@@ -2,11 +2,9 @@ import KeysJson from './Keys.json' with {type: 'json'};
 
 let StartFunc = () => {
     let jVarLocalForm = document.getElementById("FormId");
-    // var formData = new FormData(jVarLocalForm);
-    // formData.append("image", jFLocalImageToUrl());
-    // debugger
-    // KeysJson.body = formData;
+
     let jVarLocalData = jFLocalserializeFormData(jVarLocalForm);
+
     jVarLocalData.image = jFLocalImageToUrl();
     KeysJson.body = JSON.stringify(jVarLocalData);
 
