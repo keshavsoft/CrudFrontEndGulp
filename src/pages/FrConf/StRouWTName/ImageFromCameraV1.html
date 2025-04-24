@@ -107,7 +107,7 @@
                                     Student Name should not be empty!!
                                 </div>
                             </div>
-                
+
                             <div class="mb-3">
                                 <label class="form-label">Mobile</label>
                                 <input name="Mobile" type="text" class="form-control" autocomplete="off" required
@@ -116,10 +116,10 @@
                                     Mobile should not be empty!!
                                 </div>
                             </div>
-                
+
                             <div class="mb-3 text-center">
-                                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#cameraModal"
-                                    onclick="
+                                <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#cameraModal" onclick="
                                         navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(stream => {
                                             const video = document.getElementById('video');
                                             video.srcObject = stream;
@@ -127,9 +127,15 @@
                                 ">
                                     Start Camera
                                 </button>
-                                <img id="photoPreview" class="img-fluid rounded border d-none" alt="Captured photo will appear here" />
                             </div>
-                
+
+                            <!-- ⬇️ Place preview below button ⬇️ -->
+                            <div class="mb-3 text-center">
+                                <img id="photoPreview" class="img-fluid rounded border d-none"
+                                    alt="Captured photo will appear here" />
+                            </div>
+
+
                             <div class="text-center">
                                 <button id="SaveButtonId" class="btn btn-success">Save</button>
                             </div>
