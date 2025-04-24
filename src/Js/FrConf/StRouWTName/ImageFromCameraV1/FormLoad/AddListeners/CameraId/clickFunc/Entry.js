@@ -18,8 +18,6 @@ let StartFunc = () => {
             // always check for errors at the end.
             console.error(`${err.name}: ${err.message}`);
         });
-
-
 };
 
 const LocalFuncShowModal = () => {

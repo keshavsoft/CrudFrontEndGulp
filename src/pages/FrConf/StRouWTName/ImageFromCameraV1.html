@@ -118,15 +118,7 @@
                             </div>
 
                             <div class="mb-3 text-center">
-                                <button class="btn btn-primary" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#cameraModal" onclick="
-                                        navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(stream => {
-                                            const video = document.getElementById('video');
-                                            video.srcObject = stream;
-                                        });
-                                ">
-                                    Start Camera
-                                </button>
+                                <button id="CameraId" class="btn btn-primary">Start Camera</button>
                             </div>
 
                             <!-- ⬇️ Place preview below button ⬇️ -->
@@ -191,7 +183,7 @@
     "path": "../../.."
     })
 
-    <script type="module" src="../../../Js/FrConf/StRouWTName/ImageFromCamera/entryFile.js"></script>
+    <script type="module" src="../../../Js/FrConf/StRouWTName/ImageFromCameraV1/entryFile.js"></script>
 
 </body>
 
