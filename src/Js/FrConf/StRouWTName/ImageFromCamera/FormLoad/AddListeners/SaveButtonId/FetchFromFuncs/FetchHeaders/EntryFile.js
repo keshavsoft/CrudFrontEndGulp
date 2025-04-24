@@ -31,16 +31,17 @@ function jFLocalserializeFormData(form) {
 
 const jFLocalImageToUrl = () => {
     var c = document.createElement('canvas');
-    var img = document.getElementById('photo');
+    var img = document.getElementById('photoPreview'); 
     c.height = img.naturalHeight;
     c.width = img.naturalWidth;
     var ctx = c.getContext('2d');
 
     ctx.drawImage(img, 0, 0, c.width, c.height);
     var base64String = c.toDataURL();
-    console.log("base64Strings : ", base64String);
+    // console.log("base64Strings : ", base64String);
 
     return base64String;
 };
+
 
 export { StartFunc }
