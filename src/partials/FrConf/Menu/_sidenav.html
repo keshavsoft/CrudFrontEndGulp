@@ -36,15 +36,15 @@
         <ul class="nav flex-column pt-3 pt-md-0">
             <li class="nav-item">
                 <a href="@@path/index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
+                    <span class="sidebar-icon text-white">
                         <i class="bi bi-grid"></i>
                     </span>
                     <span class="mt-1 ms-1 sidebar-text">Home</span>
                 </a>
             </li>
-            <li class="nav-item @@if (context.page === 'overview') { active }">
-                <a href="@@path/pages/dashboard/dashboard.html" class="nav-link">
-                    <span class="sidebar-icon">
+            <li class="nav-item @@if (context.page === 'index') { active }">
+                <a href="@@path/pages/FrConf/index.html" class="nav-link">
+                    <span class="sidebar-icon text-danger">
                         <i class="bi bi-speedometer2"></i>
                     </span>
                     <span class="sidebar-text">Dashboard</span>
@@ -52,8 +52,8 @@
             </li>
             <li class="nav-item">
                 <a href="../" class="nav-link">
-                    <span class="sidebar-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    <span class="sidebar-icon text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z" />
@@ -64,15 +64,14 @@
             </li>
 
             <li class="nav-item @@if (context.page === 'overview') { active }">
-                <a href="./StRouWTName/FixedColShowAll.html" class="nav-link">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-box-arrow-right"></i>
+                <a href="./StRouWTName/index.html" class="nav-link">
+                    <span class="sidebar-icon text-success">
+                        <i class="bi bi-signpost-2-fill"></i>
                     </span>
                     <span class="sidebar-text">Start Route</span>
                 </a>
             </li>
-
-
         </ul>
+
     </div>
 </nav>
