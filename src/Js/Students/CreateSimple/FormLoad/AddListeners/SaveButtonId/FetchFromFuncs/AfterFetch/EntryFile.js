@@ -1,31 +1,20 @@
-import UrlJson from './url.json' with {type: 'json'};
-import ConfigJson from '../../../../../Config.json' with {type: 'json'};
+import { StartFunc as Status200 } from "./Status200.js";
+import { StartFunc as Status500 } from "./Status500.js";
 
-let StartFunc = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
+let StartFunc = async ({ inResponse }) => {
+    let jVarLocalResponse = inResponse;
 
-    if (LocalFuncForSingleTable({ inRowPk: LocalRowPk }) === false) {
-        LocalFuncForAllTables({ inRowPk: LocalRowPk });
+    if (jVarLocalResponse.status === 200) {
+        let jVarLocalDataAsJson = await jVarLocalResponse.json();
+
+        Status200({ inResponseAsJson: jVarLocalDataAsJson });
+    };
+
+    if (jVarLocalResponse.status === 500) {
+        let jVarLocalFromResponse = await jVarLocalResponse.text();
+
+        Status500({ inResponseAsText: jVarLocalFromResponse });
     };
 };
 
-const LocalFuncForSingleTable = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
-
-    if (window.location.pathname.endsWith(`/${UrlJson.PresentUrl}`)) {
-        window.location.href = `${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
-        return true;
-    };
-
-    return false;
-};
-
-const LocalFuncForAllTables = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
-    const jVarGlobalTableName = ConfigJson.tableName;
-
-    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
-};
-
-
-export { StartFunc }
+export { StartFunc };
