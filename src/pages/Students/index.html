@@ -20,25 +20,24 @@
 
 <head>
     @@include('./_headWithBSTable.html', {
-    "path": "..",
+    "path": "../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap FixedCol"
     })
 </head>
 
 <body>
     @@include('./Students/_nav.html', {
-    "path": ".."
+    "path": "../.."
     })
 
     @@include('./Students/_sidenav.html', {
-    "path": "..",
-    "page": "FixedColShowAll",
-    "page_group": "FixedColumns"
+    "path": "../..",
+    "page": "index"
     })
 
     <main class="content">
         @@include('./Students/_topbar.html', {
-        "path": ".."
+        "path": "../.."
         })
 
         <div class="py-4">
@@ -77,7 +76,7 @@
 
                     <button id="LoadingButtonId" class="btn btn-primary d-none" type="button" disabled>
                         <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                        <span role="status">Loading...</span>
+                        <span role="status">Loading../...</span>
                     </button>
                 </div>
             </div>
@@ -131,13 +130,13 @@
         </div>
 
         @@include('./Students/_footer.html', {
-        "path": "..",
+        "path": "../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
     @@include('./Students/_scripts.html', {
-    "path": ".."
+    "path": "../.."
     })
 </body>
 
