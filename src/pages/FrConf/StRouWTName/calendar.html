@@ -1,0 +1,77 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./FrConf/StRouWTName/_headWithCalendar.html', {
+    "path": "../../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap FixedCol"
+    })
+</head>
+
+<body>
+    @@include('./FrConf/StRouWTName/_nav.html', {
+    "path": "../../.."
+    })
+
+    @@include('./FrConf/StRouWTName/_sidenav.html', {
+    "path": "../../..",
+    "page": "FixedColShowAll",
+    "page_group": "FixedColumns"
+    })
+
+    <main class="content">
+        @@include('./FrConf/StRouWTName/_topbar.html', {
+        "path": "../../.."
+        })
+
+        <div class="row">
+            <div class="col-7">
+                <div id="calendar"></div>
+            </div>
+        </div>
+
+        @@include('./FrConf/StRouWTName/_footer.html', {
+        "path": "../../..",
+        "classes": "bg-gray-800 text-white"
+        })
+    </main>
+
+    @@include('./FrConf/StRouWTName/_scriptsWithCount.html', {
+    "path": "../../.."
+    })
+
+    <script>
+        let jVarGlobalCalendar = null;
+
+        const jFADdEvent = () => {
+            calendar.addEvent({
+                title: "3rd",
+                start: '2025-03-19',
+                className: 'bg-success'
+            });
+        };
+
+    </script>
+
+    <script type="module" src="../../../Js/FrConf/StRouWTName/Calendar/entryFile.js"></script>
+
+</body>
+
+</html>
