@@ -60,8 +60,10 @@
     <script>
         let jVarGlobalCalendar = null;
 
+        var calendarEl = document.getElementById('calendar');
+
         const jFADdEvent = () => {
-            calendar.addEvent({
+            jVarGlobalCalendar.addEvent({
                 title: "3rd",
                 start: '2025-03-19',
                 className: 'bg-success'
