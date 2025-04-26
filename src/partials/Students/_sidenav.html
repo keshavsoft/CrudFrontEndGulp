@@ -72,7 +72,7 @@
                         </span>
                         <span class="sidebar-text">Create</span>
                     </span>
-                    <span class="link-arrow text-muted">
+                    <span class="link-arrow">
                         <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -82,25 +82,22 @@
                     </span>
                 </span>
 
-                <div class="multi-level collapse @@if (context.page_group === 'Create') { show }" role="list"
+                <div class="multi-level collapse @@if (context.page_group === 'createNew') { show }" role="list"
                     id="submenu-Orders" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item @@if (context.page === 'createNew') { active }">
                             <a class="nav-link d-flex align-items-center" href="createNew.html">
-                                <span class="sidebar-text-contracted text-info">C</span>
                                 <span class="sidebar-text">Create New</span>
                             </a>
                         </li>
                         <li class="nav-item @@if (context.page === 'createNewWithChecks') { active }">
                             <a class="nav-link d-flex align-items-center" href="createNewWithChecks.html">
-                                <span class="sidebar-text-contracted text-info">W</span>
-                                <span class="sidebar-text">WithChecks</span>
+                                <span class="sidebar-text">CreateWithChecks</span>
                             </a>
                         </li>
                         <li class="nav-item @@if (context.page === 'createSimple') { active }">
                             <a class="nav-link d-flex align-items-center" href="createSimple.html">
-                                <span class="sidebar-text-contracted text-info">W</span>
-                                <span class="sidebar-text">Simple</span>
+                                <span class="sidebar-text">CreateSimple</span>
                             </a>
                         </li>
                     </ul>
@@ -263,11 +260,11 @@
 
             <li class="nav-item">
                 <span
-                    class="nav-link @@if (context.page_group !== 'calendar') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#submenu-Orders">
+                    class="nav-link @@if (context.page_group !== '') { collapsed } d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#SelectedColumnsMenu">
                     <span>
-                        <span class="sidebar-icon text-danger">
-                            <i class="bi bi-calendar-check"></i>
+                        <span class="sidebar-icon" style="color: #FF5733;">
+                            <i class="bi bi-check2-square"></i>
                         </span>
                         <span class="sidebar-text">Calendar</span>
                     </span>
@@ -275,9 +272,8 @@
                         <i class="bi bi-chevron-right"></i>
                     </span>
                 </span>
-
-                <div class="multi-level collapse @@if (context.page_group === 'calendar') { show }" role="list"
-                    id="submenu-Orders" aria-expanded="false">
+                <div class="multi-level collapse @@if (context.page_group === 'calendarDate') { show }" role="list"
+                    id="CalendarAddEvents" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item @@if (context.page === 'CalendarAddEvents') { active }">
                             <a class="nav-link d-flex align-items-center" href="CalendarAddEvents.html">
@@ -291,8 +287,8 @@
                                 <span class="sidebar-text">Big</span>
                             </a>
                         </li>
-                        <li class="nav-item @@if (context.page === 'calendar') { active }">
-                            <a class="nav-link d-flex align-items-center" href="calendar.html">
+                        <li class="nav-item @@if (context.page === 'calendarFull') { active }">
+                            <a class="nav-link d-flex align-items-center" href="calendarFull.html">
                                 <span class="sidebar-icon text-dark"><i class="bi bi-calendar2"></i></span>
                                 <span class="sidebar-text">Full</span>
                             </a>
