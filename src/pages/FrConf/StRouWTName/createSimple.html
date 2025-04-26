@@ -54,7 +54,8 @@
                                 </path>
                             </svg>
                         </a>
-                    </li><li class="breadcrumb-item"><a href="../../index.html">From Config</a></li>
+                    </li>
+                    <li class="breadcrumb-item"><a href="../../index.html">From Config</a></li>
                     <li class="breadcrumb-item"><a href="../../FrConf/index.html">StartRoute</a></li>
                     <li class="breadcrumb-item"><a href="#">Create</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Simple</li>
@@ -74,7 +75,7 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="card border-0 shadow components-section">
+                <div class="card border-0 shadow components-section" id="CardHtmlId">
                     <div class="card-body">
                         <form onsubmit="return false" id="FormId">
                             <div class="mb-3">
@@ -93,6 +94,11 @@
                                 <div class="invalid-feedback">
                                     Mobile should not be empty!!
                                 </div>
+                            </div>
+
+                            <div class="mb-3" id="ServerErrorId" style="display: none;"><span
+                                    class="text-danger fw-bold" id="ServerErrorToShowId">Error from
+                                    Server</span>
                             </div>
 
                             <div class="text-center">

@@ -1,4 +1,4 @@
-import { StartFunc as StartFuncFuncToRun } from "./FetchFromFuncs/entryFile.js";
+import { StartFunc as StartFuncFuncToRun } from "./FetchFromFuncs/Entry.js";
 
 let StartFunc = () => {
     let jVarLocalRefreshBSTableId = document.getElementById("SaveButtonId");
