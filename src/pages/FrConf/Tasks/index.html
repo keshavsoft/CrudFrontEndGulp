@@ -20,24 +20,24 @@
 
 <head>
     @@include('./_headWithBSTable.html', {
-    "path": "../..",
+    "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap FixedCol"
     })
 </head>
 
 <body>
-    @@include('./Calendar/_nav.html', {
-    "path": "../.."
+    @@include('./FrConf/Tasks/_nav.html', {
+    "path": "../../.."
     })
 
-    @@include('./Calendar/_sidenav.html', {
-    "path": "../..",
+    @@include('./FrConf/Tasks/_sidenav.html', {
+    "path": "../../..",
     "page": "index"
     })
 
     <main class="content">
-        @@include('./Calendar/_topbar.html', {
-        "path": "../.."
+        @@include('./FrConf/Tasks/_topbar.html', {
+        "path": "../../.."
         })
 
         <div class="py-4">
@@ -58,7 +58,7 @@
                             </li>
                             <li class="breadcrumb-item"><a href="#"></a>Student_Crud</li>
                             <li class="breadcrumb-item"><a href="#"></a>Pages</li>
-                            <li class="breadcrumb-item"><a href="../../../pages/FrConf/index.html"></a>FrConf</li>
+                            <li class="breadcrumb-item"><a href="../../../pages/FrConf/index.html"></a>Tasks</li>
                             <li class="breadcrumb-item"><a href="../../FrConf/index.html">Start Route</a></li>
                             <li class="breadcrumb-item active" aria-current="page">index</li>
                         </ol>
@@ -72,7 +72,7 @@
             <div class="col-12 col-sm-6 col-xl-4 mb-4">
                 <div class="card border-0 shadow">
                     <div class="card-body">
-                        <a href="./StRouWTName/FixedColShowAll.html">
+                        <a href="#">
                             <div class="row d-block d-xl-flex align-items-center">
                                 <div
                                     class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
@@ -84,13 +84,13 @@
                                                 clip-rule="evenodd"></path>
                                         </svg></div>
                                     <div class="d-sm-none">
-                                        <h2 class="fw-extrabold h5">Start Route</h2>
+                                        <h2 class="fw-extrabold h5">Tasks</h2>
                                         <h3 class="mb-1">50.88%</h3>
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-7 px-xl-0">
                                     <div class="d-none d-sm-block">
-                                        <h2 class="h5">Start Route</h2>
+                                        <h2 class="h5">Tasks</h2>
                                         <h3 class="fw-extrabold mb-1">50.88%</h3>
                                     </div><small>Feb 1 - Apr 1</small>
                                     <div class="small d-flex mt-1"><svg class="icon icon-xs text-success"
@@ -109,14 +109,14 @@
             </div>
         </div>
 
-        @@include('./Calendar/_footer.html', {
-        "path": "../..",
+        @@include('./FrConf/Tasks/_footer.html', {
+        "path": "../../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./Calendar/_scripts.html', {
-    "path": "../.."
+    @@include('./FrConf/Tasks/_scripts.html', {
+    "path": "../../.."
     })
 
 

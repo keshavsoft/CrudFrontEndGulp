@@ -56,7 +56,7 @@
             </li>
 
             <li class="nav-item @@if (context.page === 'index') { active }">
-                <a href="@@path/pages/FrConf/StRouWTName/index.html" class="nav-link">
+                <a href="@@path/pages/FrConf/Tasks/index.html" class="nav-link">
                     <span class="sidebar-icon text-danger">
                         <i class="bi bi-speedometer2"></i>
                     </span>
@@ -64,50 +64,6 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <span
-                    class="nav-link @@if (context.page_group !== 'createNew') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#submenu-Orders">
-                    <span>
-                        <span class="sidebar-icon text-success">
-                            <i class="bi bi-person-plus-fill"></i>
-                        </span>
-                        <span class="sidebar-text">Create</span>
-                    </span>
-                    <span class="link-arrow">
-                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                </span>
-
-                <div class="multi-level collapse @@if (context.page_group === 'Create') { show }" role="list"
-                    id="submenu-Orders" aria-expanded="false">
-                    <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'createNew') { active }">
-                            <a class="nav-link d-flex align-items-center" href="createNew.html">
-                                <span class="sidebar-text-contracted">C</span>
-                                <span class="sidebar-text">Create New</span>
-                            </a>
-                        </li>
-                        <li class="nav-item @@if (context.page === 'createNewWithChecks') { active }">
-                            <a class="nav-link d-flex align-items-center" href="createNewWithChecks.html">
-                                <span class="sidebar-text-contracted">W</span>
-                                <span class="sidebar-text">WithChecks</span>
-                            </a>
-                        </li>
-                        <li class="nav-item @@if (context.page === 'createSimple') { active }">
-                            <a class="nav-link d-flex align-items-center" href="createSimple.html">
-                                <span class="sidebar-text-contracted">W</span>
-                                <span class="sidebar-text">Simple</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
             <li class="nav-item">
                 <span
                     class="nav-link @@if (context.page_group !== 'ColumnsFromFetch') { collapsed } d-flex justify-content-between align-items-center"
@@ -138,46 +94,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item">
-                <span
-                    class="nav-link @@if (context.page_group !== 'Image') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#@@page_groupMenulinked">
-                    <span>
-                        <span class="sidebar-icon text-secondary">
-                            <i class="bi bi-image-fill"></i>
-                        </span>
-                        <span class="sidebar-text">Image</span>
-                    </span>
-                    <span class="link-arrow">
-                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                </span>
-                <div class="multi-level collapse @@if (context.page_group === 'Image') { show }" role="list"
-                    id="@@page_groupMenulinked" aria-expanded="false">
-                    <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'ImageUpload') { active }">
-                            <a class="nav-link" href="ImageUpload.html">
-                                <span class="sidebar-text">ImageUpload</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="multi-level collapse @@if (context.page_group === 'Image') { show }" role="list"
-                    id="@@page_groupMenulinked" aria-expanded="false">
-                    <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'ImageFromCamera') { active }">
-                            <a class="nav-link" href="ImageFromCameraV1.html">
-                                <span class="sidebar-text">ImageFromCamera</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
+
             <li class="nav-item">
                 <span
                     class="nav-link @@if (context.page_group !== 'FixedColumns') { collapsed } d-flex justify-content-between align-items-center"
@@ -220,7 +137,7 @@
                         <span class="sidebar-text">Calendar</span>
                     </span>
                     <span class="link-arrow">
-                        <svg class="bi bi-calendar2-check-fill" fill="currentColor" viewBox="0 0 20 20"
+                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -232,13 +149,12 @@
                     id="@@page_Calender" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item @@if (context.page === 'Calendar') { active }">
-                            <a class="nav-link" href="@@path/pages/FrConf/StRouWTName/Calendar.html">
-                                <span class="sidebar-text">Calendar</span>
+                            <a class="nav-link" href="@@path/pages/FrConf/Tasks/Calendar.html">
+                                <span class="sidebar-text">ShowAll</span>
                             </a>
                         </li>
                     </ul>
                 </div>
-
             </li>
         </ul>
     </div>
