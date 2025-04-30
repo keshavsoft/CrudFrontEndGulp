@@ -20,30 +20,31 @@
 
 <head>
     @@include('./_headWithBSTable.html', {
-    "path": "../..",
-    "title": "Volt Free Bootstrap Dashboard - Bootstrap FixedCol"
+    "path": "../../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
 </head>
 
 <body>
-    @@include('./Calendar/_nav.html', {
-    "path": "../.."
+    @@include('./FrConf/Tasks/_nav.html', {
+    "path": "../../.."
     })
 
-    @@include('./Calendar/_sidenav.html', {
-    "path": "../..",
-    "page": "FixedColShowAll",
-    "page_group": "FixedColumns"
+    @@include('./FrConf/Tasks/_sidenav.html', {
+    "path": "../../..",
+    "page": "colsFetchShowAll",
+    "page_group": "ColumnsFromFetch"
     })
 
     <main class="content">
-        @@include('./Calendar/_topbar.html', {
-        "path": "../.."
+
+        @@include('./FrConf/Tasks/_topbar.html', {
+        "path": "../../.."
         })
-        <div class="py-4">
+        <div class="py-4">     
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0">
-                    <h1 class="h4">FixedColShowAll</h1>
+                    <h1 class="h4">ColumnsFromFetch</h1>
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                         <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
                             <li class="breadcrumb-item">
@@ -58,10 +59,9 @@
                             </li>
                             <li class="breadcrumb-item"><a href="../../index.html">From Config</a></li>
                             <li class="breadcrumb-item"><a href="../../FrConf/index.html">Start Route</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">FixedColShowAll</li>
-                            <li class="breadcrumb-item"><a href="#">ShowAll</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">ColumnsFromFetch</li>
                         </ol>
-                    </nav>     
+                    </nav>
                 </div>
                 <div id="toolbar">
                     <a id="RefreshATagId" href="#"
@@ -92,17 +92,17 @@
             </div>
         </div>
 
-        @@include('./Calendar/_footer.html', {
-        "path": "../..",
+        @@include('./dashboard/_footer.html', {
+        "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./Calendar/_scriptsWithCount.html', {
-    "path": "../.."
+    @@include('./FrConf/Tasks/_scriptsWithCount.html', {
+    "path": "../../.."
     })
 
-    <script type="module" src="../../Js/Calendar/FixedColShowAll/entryFile.js"></script>
+    <script type="module" src="../../../Js/FrConf/Tasks/ColsFetchShowAll/entryFile.js"></script>
 
 </body>
 

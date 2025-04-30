@@ -19,27 +19,27 @@
 <html lang="en">
 
 <head>
-    @@include('./_headWithCalendar.html', {
-    "path": "../..",
+    @@include('./FrConf/Tasks/_headWithCalendar.html', {
+    "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap FixedCol"
     })
 
 </head>
 
 <body>
-    @@include('./Calendar/_nav.html', {
-    "path": "../.."
+    @@include('./FrConf/Tasks/_nav.html', {
+    "path": "../../.."
     })
 
-    @@include('./Calendar/_sidenav.html', {
-    "path": "../..",
+    @@include('./FrConf/Tasks/_sidenav.html', {
+    "path": "../../..",
     "page": "Calendar",
     "page_group": "Calendar"
     })
 
     <main class="content">
-        @@include('./Calendar/_topbar.html', {
-        "path": "../.."
+        @@include('./FrConf/Tasks/_topbar.html', {
+        "path": "../../.."
         })
 
         <div class="row">
@@ -48,14 +48,14 @@
             </div>
         </div>
 
-        @@include('./Calendar/_footer.html', {
-        "path": "../..",
+        @@include('./FrConf/Tasks/_footer.html', {
+        "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./Calendar/_scriptsWithCount.html', {
-    "path": "../.."
+    @@include('./FrConf/Tasks/_scriptsWithCount.html', {
+    "path": "../../.."
     })
 
     <script>
@@ -73,7 +73,7 @@
 
     </script>
 
-    <script type="module" src="../../Js/Calendar/Calendar/entryFile.js"></script>
+    <script type="module" src="../../../Js/FrConf/Tasks/Calendar/entryFile.js"></script>
 
 </body>
 
