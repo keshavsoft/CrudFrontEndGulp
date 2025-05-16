@@ -1,10 +1,13 @@
+import { StartFunc as StartFuncFromAddToDomCalendar } from "./addToDomCalendar.js";
+
 let StartFunc = () => {
     let jVarLocalBody = {};
     jVarLocalBody.title = jFLocalTopBarTaskId();
     jVarLocalBody.start = jFLocalTopBarDateId();
+    StartFuncFromAddToDomCalendar({ inEvent: jVarLocalBody });
 
     console.log("jVarLocalBody : ", jVarLocalBody);
-    return jVarLocalBody;
+    // return jVarLocalBody;
 
 };
 

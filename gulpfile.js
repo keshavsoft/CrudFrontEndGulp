@@ -190,6 +190,25 @@ gulp.task('clean:publicDir', function () {
 
 gulp.task('end:publicDir', async () => {
     fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
+    const jVarLocalYesterday = new Date(Date.now() - 86400000);
+    const jVarLocalToday = new Date();
+    const jVarLocalTomorrow = new Date(Date.now() + 86400000);
+
+    fse.writeFileSync(`${paths.dist.base}/data.json`, JSON.stringify([{
+        title: "3rd",
+        start: jVarLocalYesterday.toISOString().split('T')[0],
+        className: 'bg-danger'
+    },
+    {
+        title: "1st",
+        start: jVarLocalToday.toISOString().split('T')[0],
+        className: 'bg-success'
+    },
+    {
+        title: "2nd",
+        start: jVarLocalTomorrow.toISOString().split('T')[0],
+        className: 'bg-primary'
+    }]));
 
     return await true;
 });

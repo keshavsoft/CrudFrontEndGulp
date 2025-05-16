@@ -42,12 +42,10 @@
         })
 
         <div class="row mt-2">
-
-            <div class="col-8">
+            <div class="col-7">
                 <div id='calendar'></div>
             </div>
             <div class="col">
-                <input class="form-control" type="date">
             </div>
         </div>
     </main>
@@ -57,32 +55,13 @@
     })
 
     <script>
-        let calendar = null;
+        let jVarCommonCalendar = null;
 
         document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            const events = [{
-                title: 'All Day Event',
-                start: '2025-03-17'
-            },
-            {
-                title: '2nd',
-                start: '2025-03-18'
-            }];
 
-            calendar = new FullCalendar.Calendar(calendarEl, {
-                editable: true,
-                selectable: true,
-                businessHours: true,
-                dayMaxEvents: true, // allow "more" link when too many events
-                events: events
-            });
-
-            calendar.render();
-
-            jFAddYesterday();
-            jFAddToday();
-            jFAddTomorrow();
+            // jFAddYesterday();
+            // jFAddToday();
+            // jFAddTomorrow();
         });
 
         const jF1 = () => {
@@ -98,7 +77,7 @@
         const jFAddYesterday = () => {
             var jVarLocalYesterday = new Date(Date.now() - 86400000);
 
-            calendar.addEvent({
+            jVarCommonCalendar.addEvent({
                 title: "1st",
                 start: jVarLocalYesterday.toISOString().split('T')[0],
                 className: 'bg-success'
@@ -108,7 +87,7 @@
         const jFAddToday = () => {
             var jVarLocalYesterday = new Date();
 
-            calendar.addEvent({
+            jVarCommonCalendar.addEvent({
                 title: "2nd",
                 start: jVarLocalYesterday.toISOString().split('T')[0],
                 className: 'bg-primary'
@@ -118,7 +97,7 @@
         const jFAddTomorrow = () => {
             var jVarLocalYesterday = new Date(Date.now() + 86400000);
 
-            calendar.addEvent({
+            jVarCommonCalendar.addEvent({
                 title: "3rd",
                 start: jVarLocalYesterday.toISOString().split('T')[0],
                 className: 'bg-danger'
