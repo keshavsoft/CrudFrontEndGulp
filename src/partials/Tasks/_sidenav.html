@@ -24,28 +24,26 @@
             <div class="collapse-close d-md-none">
                 <a href="#sidebarMenu" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
                     aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
+                    <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
                 </a>
             </div>
         </div>
         <ul class="nav flex-column pt-3 pt-md-0">
             <li class="nav-item">
-                <a href="@@path/../index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon text-white">
+                <a href="@@path/../../index.html" class="nav-link d-flex align-items-center">
+                    <span class="sidebar-icon">
                         <i class="bi bi-grid"></i>
                     </span>
                     <span class="mt-1 ms-1 sidebar-text">Home</span>
                 </a>
             </li>
-            <li class="nav-item @@if (context.page === 'index') { active }">
-                <a href="@@path/pages/index.html" class="nav-link">
-                    <span class="sidebar-icon text-danger">
-                        <i class="bi bi-speedometer2"></i>
-                    </span>
-                    <span class="sidebar-text">Dashboard</span>
-                </a>
-            </li>
             <li class="nav-item">
-                <a href="../../V1/Landing/index.html" class="nav-link">
+                <a href="../" class="nav-link">
                     <span class="sidebar-icon text-warning">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
@@ -56,50 +54,35 @@
                     <span class="sidebar-text">Parent</span>
                 </a>
             </li>
-            <!-- <li class="nav-item">
-                <a href="#" target="_blank" class="nav-link d-flex justify-content-between">
-                    <span>
-                        <span class="sidebar-icon text-info">
-                            <i class="bi bi-person-circle"></i>
-                        </span>
-                        <span class="sidebar-text">Students</span>
+            <li class="nav-item @@if (context.page === 'index') { active }">
+                <a href="@@path/pages/Students/index.html" class="nav-link">
+                    <span class="sidebar-icon text-danger">
+                        <i class="bi bi-speedometer2"></i>
                     </span>
-                </a>
-            </li> -->
-            <li class="nav-item">
-                <a href="./FrConf" class="nav-link d-flex justify-content-between">
-                    <span>
-                        <span class="sidebar-icon text-success">
-                            <i class="bi bi-gear-fill"></i>
-                        </span>
-                        <span class="sidebar-text">From Config</span>
-                    </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./Students/index.html" class="nav-link d-flex justify-content-between">
-                    <span>
-                        <span class="sidebar-icon text-secondary">
-                            <i class="bi bi-window-stack"></i>
-                        </span>
-                        <span class="sidebar-text">UI</span>
-                    </span>
+                    <span class="sidebar-text">Dashboard</span>
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a href="./Tasks/calendar.html" class="nav-link d-flex justify-content-between">
-                    <span>
-                        <span class="sidebar-icon text-secondary">
-                            <i class="bi bi-window-stack"></i>
-                        </span>
-                        <span class="sidebar-text">Tasks</span>
+            <li class="nav-item @@if (context.page === 'calendar') { active }">
+                <a href="./calendar.html" class="nav-link">
+                    <span class="sidebar-icon text-warning">
+                        <i class="bi bi-calendar2"></i>
                     </span>
+                    <span class="sidebar-text">Calendar</span>
                 </a>
             </li>
 
+            <li class="nav-item @@if (context.page === 'simple') { active }">
+                <a href="./simple.html" class="nav-link">
+                    <span class="sidebar-icon text-warning">
+                        <i class="bi bi-calendar3"></i>
+                    </span>
+                    <span class="sidebar-text">Simple</span>
+                </a>
+            </li>
+
+            <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 
         </ul>
-
     </div>
 </nav>
