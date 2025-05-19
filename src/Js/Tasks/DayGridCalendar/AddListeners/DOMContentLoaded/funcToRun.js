@@ -4,6 +4,7 @@ let StartFunc = async () => {
     const events = await LocalFuncFetchData();
 
     jVarCommonCalendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridWeek',
         editable: true,
         selectable: true,
         businessHours: true,
