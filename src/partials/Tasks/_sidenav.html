@@ -83,6 +83,23 @@
 
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 
+            <li class="nav-item @@if (context.page === 'simple') { active }">
+                <a href="#" class="nav-link" id="ToLocalStorageId">
+                    <span class="sidebar-icon text-warning">
+                        <i class="bi bi-calendar3"></i>
+                    </span>
+                    <span class="sidebar-text">To LocalStorage</span>
+                </a>
+            </li>
+
+            <li class="nav-item @@if (context.page === 'simple') { active }">
+                <a href="#" class="nav-link" id="FromLocalStorageId">
+                    <span class="sidebar-icon text-warning">
+                        <i class="bi bi-calendar3"></i>
+                    </span>
+                    <span class="sidebar-text">From LocalStorage</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
