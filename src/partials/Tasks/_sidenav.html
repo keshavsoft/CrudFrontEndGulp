@@ -65,8 +65,8 @@
 
             <li class="nav-item @@if (context.page === 'calendar') { active }">
                 <a href="./calendar.html" class="nav-link">
-                    <span class="sidebar-icon text-warning">
-                        <i class="bi bi-calendar2"></i>
+                    <span class="sidebar-icon text-info">
+                        <i class="bi bi-calendar-check"></i>
                     </span>
                     <span class="sidebar-text">Calendar</span>
                 </a>
@@ -74,16 +74,35 @@
 
             <li class="nav-item @@if (context.page === 'simple') { active }">
                 <a href="./simple.html" class="nav-link">
-                    <span class="sidebar-icon text-warning">
-                        <i class="bi bi-calendar3"></i>
+                    <span class="sidebar-icon text-success">
+                        <i class="bi bi-calendar-event"></i>
                     </span>
                     <span class="sidebar-text">Simple</span>
                 </a>
             </li>
 
+            <li class="nav-item @@if (context.page === 'DayGrid') { active }">
+                <a href="./DayGridCalendar.html" class="nav-link">
+                    <span class="sidebar-icon text-danger">
+                        <i class="bi bi-calendar3-range"></i>
+                    </span>
+                    <span class="sidebar-text">DayGrid</span>
+                </a>
+            </li>
+
+            <li class="nav-item @@if (context.page === 'WeekDayGrid') { active }">
+                <a href="./WeekGridCalendar.html" class="nav-link">
+                    <span class="sidebar-icon text-warning">
+                        <i class="bi bi-calendar-week"></i>
+                    </span>
+                    <span class="sidebar-text">Week DayGrid</span>
+                </a>
+            </li>
+
+
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 
-            <li class="nav-item @@if (context.page === 'simple') { active }">
+            <li class="nav-item @@if (context.page === 'ToLocal') { active }">
                 <a href="#" class="nav-link" id="ToLocalStorageId">
                     <span class="sidebar-icon text-warning">
                         <i class="bi bi-calendar3"></i>
@@ -92,7 +111,7 @@
                 </a>
             </li>
 
-            <li class="nav-item @@if (context.page === 'simple') { active }">
+            <li class="nav-item @@if (context.page === 'FromLocal') { active }">
                 <a href="#" class="nav-link" id="FromLocalStorageId">
                     <span class="sidebar-icon text-warning">
                         <i class="bi bi-calendar3"></i>
